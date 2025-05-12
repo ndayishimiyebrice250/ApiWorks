@@ -1,10 +1,14 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const productRoutes = require('./products');
 const authRoutes = require('./auth');
 const jwt = require('jsonwebtoken');
 
+
+
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 const SECRET_KEY = 'abefghijklmnopqrstuvwxyz1_234567890jdfyhgtuasjgfdsbfeadbmfjdfbvchjdbv_edhs';
